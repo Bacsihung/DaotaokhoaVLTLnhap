@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Dashboard Admin – VLTL PHCN</title>
+<style>
+:root{--bg:#e9eff7;--card:#fff;--tx:#1e2a3a;--mut:#64748b;--pr:#2b5797;--pr2:#dbe7fb;--bd:#b9cbe6;--ok:#16a34a;--no:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx)}
+.wrap{max-width:960px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:22px;margin:0 0 6px}
+.sub{color:var(--mut);margin:0 0 18px;font-size:14px}
+.p{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 16px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.ch2{font-weight:700;font-size:15px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.pill{background:var(--pr2);color:var(--pr);font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600}
+.dash-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:10px 0 14px}
+.dash-card{background:linear-gradient(135deg,var(--pr2),#fff);border:1px solid var(--bd);border-radius:12px;padding:14px 12px;text-align:center}
+.dash-card b{display:block;font-size:22px;font-weight:700;color:var(--pr);line-height:1.2}
+.dash-card span{font-size:12px;color:var(--mut)}
+.dash-card.warn{background:linear-gradient(135deg,#fef3c7,#fff)}
+.dash-card.warn b{color:#b45309}
+.dash-card.ok{background:linear-gradient(135deg,#dcfce7,#fff)}
+.dash-card.ok b{color:#15803d}
+.dash-sec{margin-top:14px}
+.dash-sec h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.dash-demo{font-size:13px;background:#eff6ff;color:#1e40af;border:1px dashed #93c5fd;border-radius:8px;padding:10px 12px;margin-bottom:12px}
+.tb{width:100%;border-collapse:collapse;font-size:13px}
+.tb th,.tb td{padding:8px 10px;border-bottom:1px solid var(--bd);text-align:left}
+.tb th{color:var(--mut);font-weight:600;font-size:12px}
+.ov{overflow:auto}
+.mut{color:var(--mut);font-size:13px}
+.badge{display:inline-block;padding:8px 12px;background:#2b5797;color:#fff;border-radius:8px;font-size:13px;text-decoration:none;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Dashboard quản trị</h1>
+  <p class="sub">Bản demo minh họa — Khoa VLTL–PHCN · Bệnh viện YHCT TP.HCM</p>
+  <div class="p" id="adminDash">
+    <div class="ch2">Dashboard quản trị<span class="pill">Tổng quan</span></div>
+    <div class="dash-demo">📊 Đang xem <b>dữ liệu minh họa</b>. Trên web thật (tab Quản trị viên), số liệu lấy từ danh sách học viên + kết quả thi.</div>
+    <div class="dash-grid">
+      <div class="dash-card"><b>7</b><span>Tổng học viên (DS)</span></div>
+      <div class="dash-card"><b>5</b><span>Đã có bài thi</span></div>
+      <div class="dash-card ok"><b>4</b><span>Đạt (≥ 5 điểm)</span></div>
+      <div class="dash-card warn"><b>1</b><span>Chưa đạt (&lt; 5)</span></div>
+      <div class="dash-card"><b>7.0</b><span>Điểm TB</span></div>
+      <div class="dash-card warn"><b>2</b><span>Chưa thi</span></div>
+    </div>
+    <div class="dash-sec"><h4>Theo đối tượng</h4>
+      <div class="ov"><table class="tb">
+        <tr><th>Đối tượng</th><th>Số HV</th><th>Đã thi</th><th>Đạt</th><th>Chưa đạt</th><th>Điểm TB</th></tr>
+        <tr><td>Bác sĩ</td><td>2</td><td>2</td><td>1</td><td>1</td><td><b>6.4</b></td></tr>
+        <tr><td>Cử nhân PHCN</td><td>3</td><td>2</td><td>2</td><td>0</td><td><b>7.8</b></td></tr>
+        <tr><td>Y sĩ</td><td>2</td><td>1</td><td>1</td><td>0</td><td><b>6.8</b></td></tr>
+      </table></div>
+    </div>
+    <div class="dash-sec"><h4>Điểm trung bình theo bộ đề</h4>
+      <div class="ov"><table class="tb">
+        <tr><th>Bộ đề</th><th>Số bài</th><th>Điểm TB</th></tr>
+        <tr><td>Bác sĩ · đề 1</td><td>1</td><td><b>8.2</b></td></tr>
+        <tr><td>Bác sĩ · đề 2</td><td>1</td><td><b>4.5</b></td></tr>
+        <tr><td>Cử nhân PHCN · đề 1 · POSTTEST</td><td>2</td><td><b>7.8</b></td></tr>
+        <tr><td>Y sĩ · đề 1</td><td>1</td><td><b>6.8</b></td></tr>
+      </table></div>
+    </div>
+    <div class="dash-sec"><h4>Chưa thi (2)</h4>
+      <div class="ov"><table class="tb">
+        <tr><th>Họ tên</th><th>Đối tượng</th><th>Thời gian TH</th></tr>
+        <tr><td>Hoàng Văn E</td><td>Cử nhân PHCN</td><td>01/06/2026 → 02/12/2026</td></tr>
+        <tr><td>Đặng Văn G</td><td>Y sĩ</td><td>01/10/2026 → 30/11/2026</td></tr>
+      </table></div>
+    </div>
+    <p class="mut" style="margin-top:10px">Đạt = điểm ≥ 5. Kết quả vòng quay QTKT không tính vào điểm thi.</p>
+  </div>
+  <p class="mut">Trên site chính: đăng nhập <b>Quản trị viên</b> → Dashboard nằm trên cùng (dưới Trợ lý AI).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khoa VLTL – PHCN | Quản lý đào tạo</title>
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+  <div id="login"></div>
+  <div class="app-shell" id="shell" style="display:none">
+    <aside class="app-sidebar" id="sidebar"></aside>
+    <div class="backdrop" id="backdrop"></div>
+    <div class="app-main">
+      <header class="app-header">
+        <button class="icon-btn" id="menuBtn" aria-label="Thu hoặc mở menu"><i class="fas fa-bars"></i></button>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input id="globalSearch" type="search" placeholder="Tìm sinh viên, trường, lớp  (/)" aria-label="Tìm kiếm">
+        </div>
+        <div class="header-tools">
+          <button class="icon-btn" id="undoBtn" aria-label="Hoàn tác"><i class="fas fa-undo"></i></button>
+          <button class="icon-btn" id="themeBtn" aria-label="Chế độ sáng hoặc tối"><i class="fas fa-adjust"></i></button>
+          <button class="icon-btn bell" aria-label="Thông báo"><i class="fas fa-bell"></i><span class="dot" id="bellDot">0</span></button>
+          <div class="who"><b id="whoName"></b><span id="whoRole"></span></div>
+          <div class="avatar" id="avatar" aria-hidden="true">QT</div>
+          <button class="btn sm ghost" id="logoutBtn">Thoát</button>
+        </div>
+      </header>
+      <main class="app-content">
+        <div class="page-title" id="pageTitle"></div>
+        <div id="content"></div>
+      </main>
+    </div>
+  </div>
+  <button class="fab" id="fab" aria-label="Điểm danh nhanh"><i class="fas fa-clipboard-check"></i></button>
+  <div class="toast-host" id="toastHost"></div>
+  <div id="modalHost"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
